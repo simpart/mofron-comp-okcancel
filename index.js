@@ -43,11 +43,8 @@ module.exports = class extends mofron.class.Component {
         try {
             super.initDomConts();
             this.rootDom()[0].style({
-                'position': 'absolute',
-		'bottom':   '0.3rem',
 		'display':  'flex'
             });
-            this.effect(new HrzPos());
 	    this.ok('OK');
 	    this.cancel('Cancel');
             this.child([ this.cancel(),this.ok() ]);
@@ -118,7 +115,7 @@ module.exports = class extends mofron.class.Component {
                 return;
 	    } else if (true === comutl.isinc(prm,'Button')) {
                 prm.config({
-		    size: new ConfArg('1.8rem','0.28rem'),
+		    size: new ConfArg('1.5rem','0.28rem'),
 		    clickEvent: new ConfArg(this.execEvent, { comp:this, type:true })
 		});
 	    }
